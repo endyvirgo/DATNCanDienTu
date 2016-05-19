@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             if #available(iOS 9.2, *) {
                 if traitCollection.forceTouchCapability == UIForceTouchCapability.Available {
                 //Force touch is available.
-                    Available in iOS 9.0 and later//
+                //Available in iOS 9.0 and later
                     maximumForce = min(firstTouch.maximumPossibleForce, maximumForce)
                     if firstTouch.force >= maximumForce {
                         let max = (maximumForce/firstTouch.maximumPossibleForce) * 337
