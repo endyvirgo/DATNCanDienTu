@@ -25,7 +25,10 @@ class ViewController: UIViewController {
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let firstTouch = touches.first {
-            if #available(iOS 9.2, *) {
+            if #available(iOS 9.0, *) {
+            //#available trong ví dụ trên dùng để kiểm tra tính khả dụng trên hệ điều hành từ iOS 9.0 trở đi
+            //WildCard * là bắt buộc phải có với ý ám chỉ chung platform hiện tại được liệt kê ra 
+            //và các phiên bản mới hơn của platform đó sẽ xuất hiện trong tương lai
                 if traitCollection.forceTouchCapability == UIForceTouchCapability.Available {
                 //Force touch is available.
                 //Available in iOS 9.0 and later
